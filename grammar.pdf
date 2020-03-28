@@ -1,0 +1,17 @@
+S1 -> { S }
+S -> S A | A 
+A -> { S } | B 
+B -> B1 | B2 
+B2 -> B2 = B3 | B3  
+B3 -> B3 + B4 | B3 - B4 | B4 
+B4 -> B4 * B5 | B4 / B5 | B4 % B5 | B5  
+B5 -> F | G 
+B1 -> C D 
+C -> int | float | char
+D -> D , E | E
+E -> F = G | F | *F | F H
+H -> [ I ] H | epsilon
+G -> integerConstant | floatConstant
+F -> variableName
+I -> floatConstant
+    
